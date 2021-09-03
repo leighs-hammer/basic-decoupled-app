@@ -3,9 +3,10 @@
 1. INSTALL - `npm install`
 2. Add credentials - Create a .env.local adding in the keys as required. 
 3. Add details to your app in partners
---> app url = https://ngrok.domain/api/auth
---> whitelist = https://ngrok.domain/
-4. start ngrok and `npm run dev`
+4. --> app url = https://ngrok.domain/api/auth
+5. --> whitelist = https://ngrok.domain/
+6. start ngrok - I have an npm script `npm run ngrok:leigh` add one or start manually. 
+7. `npm run dev`
 
 
 ## Sample .env.local
