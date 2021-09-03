@@ -1,34 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Getting started
 
-## Getting Started
+1. INSTALL - `npm install`
+2. Add credentials - Create a .env.local adding in the keys as required. 
+3. Add details to your app in partners
+--> app url = https://ngrok.domain/api/auth
+--> whitelist = https://ngrok.domain/
+4. start ngrok and `npm run dev`
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
+## Sample .env.local
+
 ```
+  APP_URL=https://some.ngrok.domain
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  SHOPIFY_API_VERSION=2021-07
+  SHOPIFY_APP_KEY=KEY_HERE
+  NEXT_PUBLIC_SHOPIFY_APP_KEY=KEY_HERE
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+  SHOPIFY_APP_SECRET=SECRET_HERE
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+  SHOPIFY_APP_SCOPES=read_content,write_content,read_themes,write_themes,read_products,write_products,read_script_tags,write_script_tags,read_locales,write_locales,read_translations,write_translations
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+  MONGO_DB_CONNECTION_STRING=ADD_CONNECTION_STRING
+  MONGO_DB_DATABASE=decoupled-staging
+  MONGO_DB_DATABASE_ROOT=stores
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
