@@ -12,8 +12,8 @@ const ServeSide: React.FC<ServerSideProps> = ({serverData}) => {
           title="Request runs server side pre render"
           sectioned
         >
-          <p>To explore more FE -> BE/DB fetching approaches</p>
-          <a href="https://nextjs.org/docs/basic-features/data-fetching" target="_blank">Next data fetching docs</a>
+          <p>To explore more FE to BE/DB fetching approaches</p>
+          <a href="https://nextjs.org/docs/basic-features/data-fetching" target="_blank" rel="noreferrer">Next data fetching docs</a>
         </Card>
         
         <Card

@@ -1,5 +1,5 @@
 import { Card, Page } from "@shopify/polaris";
-
+import staticData from '../public/data/data.json'
 interface StaticGeneratedProps {
   staticData: { data: string; };
 }
@@ -13,8 +13,8 @@ const Static: React.FC<StaticGeneratedProps> = ({staticData}) => {
           title="Data generated at build time static"
           sectioned
         >
-          <p>To explore more FE -> BE/DB fetching approaches</p>
-          <a href="https://nextjs.org/docs/basic-features/data-fetching" target="_blank">Next data fetching docs</a>
+          <p>To explore more FE to BE/DB fetching approaches</p>
+          <a href="https://nextjs.org/docs/basic-features/data-fetching" target="_blank" rel="noreferrer">Next data fetching docs</a>
         </Card>
 
         <Card
@@ -33,9 +33,7 @@ const Static: React.FC<StaticGeneratedProps> = ({staticData}) => {
 
 
 export async function getStaticProps(context) {
-  // crappy example as could be an import but here ya go
-  const staticData = await(await (fetch(`${process.env.APP_URL}/data/data.json`))).json()
-  
+  // could be a fetch or module import here to get static data.
   return {
     props: {
       staticData
