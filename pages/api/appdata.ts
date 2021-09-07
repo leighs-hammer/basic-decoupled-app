@@ -27,7 +27,7 @@ const appData = async (req: NextApiRequest, res: NextApiResponse) => {
     
     // have a store doc lets get it back!
     if(storeDocument) {
-      return res.status(200).json(Object.assign({},{...storeDocument}, {token: "REDACTED"}))
+      return res.status(200).json(Object.assign({},{...storeDocument}, {token: "REDACTED", scopes_at_install: "REDACTED"}))
     }
 
     // no document no worries lets create one 
@@ -50,7 +50,7 @@ const appData = async (req: NextApiRequest, res: NextApiResponse) => {
       console.log(shopDetails)
       const installObject = Object.assign({}, {...initialStoreData}, {...shopDetails}, {token, _id: shop})
       const storeCreate = await createStoreDocument(client, installObject)
-      return res.status(200).json(Object.assign({},{...installObject}, {token: "REDACTED"}))
+      return res.status(200).json(Object.assign({},{...installObject}, {token: "REDACTED", scopes_at_install: "REDACTED"}))
     }
 
 

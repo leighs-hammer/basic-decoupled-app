@@ -6,29 +6,20 @@ import TopNavItems, {excludeFromPropogation} from './TopNavItems';
 
 const Navigation = () => {
 
-  const {pathname, push} = useRouter()
+  const {push, asPath} = useRouter()
   const [selected, setSelected] = useState(0)
   const tabs = TopNavItems
 
   const handleTabChange = useCallback(
     (selectedTabIndex) => {
-        // push(`${TopNavItems[selectedTabIndex].route}`)
-        // console.log(TopNavItems[selectedTabIndex].route)
         setSelected(selectedTabIndex)
+        push(`${TopNavItems[selectedTabIndex].route}`)
       },
       [],
     )
 
-  // propogate route to shopify if required.
-  useRoutePropagation(pathname)
+  useRoutePropagation(asPath)
   
-  useEffect(() => {
-    const newPath = TopNavItems[selected].route
-    if(pathname !== newPath) {
-      push(newPath)
-    }
-  }, [pathname, selected])
-
   return (
     <Tabs tabs={tabs} selected={selected} onSelect={handleTabChange}></Tabs>
   )

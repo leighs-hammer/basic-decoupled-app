@@ -4,10 +4,10 @@ import { useAppBridge } from '@shopify/app-bridge-react';
 import { authenticatedFetch } from '@shopify/app-bridge-utils';
 
 interface IAppContextWrapper {
-  children: React.ReactChild | React.ReactElement | React.chi;
+  children: React.ReactChild | React.ReactElement | React.ReactChildren;
 }
 
-export const AppContext = React.createContext({})
+export const AppContext = React.createContext({loaded: false, appState: {}, fetch: null})
 
 export const AppContextProvider: React.FC<IAppContextWrapper> = ({children}) => {
   
@@ -36,12 +36,13 @@ export const AppContextProvider: React.FC<IAppContextWrapper> = ({children}) => 
   }, [loaded])
   
   return (
-    <AppContext.Provider value={{loaded, appState}}>
+    <AppContext.Provider value={{loaded, appState, fetch: aFetch}}>
       {children}
     </AppContext.Provider>
   )
 }
 
 export const useAppContext = () => useContext(AppContext)
+export const authFetch = () => useContext(AppContext).fetch
 
 export default AppContextProvider

@@ -15,28 +15,16 @@ export const TopNavItems: TopNavItem[] = [
     route: '/',
   },
   {
-    id: 'bundle',
-    content: 'Bundles',
-    accessibilityLabel: 'bundle',
-    route: '/bundle',
+    id: 'server',
+    content: 'Server Side',
+    accessibilityLabel: 'server',
+    route: '/server',
   },
   {
-    id: 'goals',
-    content: 'Goals',
-    accessibilityLabel: 'goals',
-    route: '/goals',
-  },
-  {
-    id: 'upsells',
-    content: 'Upsells',
-    accessibilityLabel: 'upsells',
-    route: '/upsells',
-  },
-  {
-    id: 'billing',
-    content: 'Billing',
-    accessibilityLabel: 'billing',
-    route: '/billing',
+    id: 'static',
+    content: 'Static',
+    accessibilityLabel: 'Static',
+    route: '/static',
   },
 ]
 

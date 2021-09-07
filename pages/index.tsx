@@ -11,8 +11,14 @@ export default function Home() {
   return (
     <div>
       <Page>
+        <Card 
+          title="Just a landing page"
+          sectioned
+        >
+          This app does little other than highlight some next js tooling.
+        </Card>
         <Card
-          title="Test Card Loaded!"
+          title="App context from install or DB loaded decoupled!"
           sectioned
         >
           <pre>{JSON.stringify(appdata, null, 2)}</pre>
