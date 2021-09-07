@@ -5,7 +5,7 @@
 3. Add details to your app in partners
 4. --> app url = https://ngrok.domain/api/auth
 5. --> whitelist = https://ngrok.domain/
-6. start ngrok - I have an npm script `npm run ngrok:leigh` add one or start manually. 
+6. start ngrok - I have an npm script `npm run ngrok:leigh` add one or start manually. Remember to update the app url in your .env.local
 7. `npm run dev`
 
 
