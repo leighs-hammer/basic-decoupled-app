@@ -14,7 +14,7 @@ module.exports = {
         headers: [
           {
             key: "Content-Security-Policy",
-            value: "frame-ancestors 'self' https://:shop;",
+            value: "frame-ancestors 'self' https://basic-decoupled-app.vercel.app https://*.myshopify.com https://:shop;",
           },
         ],
       },
