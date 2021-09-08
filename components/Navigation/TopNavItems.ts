@@ -26,6 +26,18 @@ export const TopNavItems: TopNavItem[] = [
     accessibilityLabel: 'Static',
     route: '/static',
   },
+  {
+    id: 'polling',
+    content: 'Polling',
+    accessibilityLabel: 'Polling',
+    route: '/polling',
+  },
+  {
+    id: 'products',
+    content: 'products',
+    accessibilityLabel: 'products',
+    route: '/products',
+  },
 ]
 
 // paths that will not force propogation. 

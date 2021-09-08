@@ -7,7 +7,9 @@ import { useRouter } from 'next/dist/client/router'
 import Stage from '../components/Stage'
 import { useEffect, useState } from 'react'
 import AppContextProvider from '../contexts/AppContext';
-
+import { QueryClient, QueryClientProvider} from 'react-query'
+ 
+const queryClient = new QueryClient()
 
 function DecoupledContainer({ Component, pageProps }) {
 
@@ -49,9 +51,11 @@ function DecoupledContainer({ Component, pageProps }) {
         linkComponent={CustomLink}
       >
         <AppContextProvider>
-          <Stage>
-            <Component {...pageProps} />
-          </Stage>
+          <QueryClientProvider client={queryClient}>
+            <Stage>
+              <Component {...pageProps} />
+            </Stage>
+          </QueryClientProvider>
         </AppContextProvider>
       </AppProvider>
     </Provider>

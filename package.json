@@ -20,6 +20,7 @@
     "ngrok": "^4.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-query": "^3.23.0",
     "shopify-hmac-validation": "^1.1.1",
     "shopify-jwt-auth-verify": "^2.0.1"
   },
