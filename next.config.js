@@ -7,7 +7,7 @@ module.exports = {
         headers: [
           {
             key: "Content-Security-Policy",
-            value: "frame-ancestors 'self' https://basic-decoupled-app.vercel.app https://*.myshopify.com",
+            value: "frame-ancestors 'self' https://*.myshopify.com", // used when no shop param is passed in
           },
         ],
       },
@@ -22,7 +22,7 @@ module.exports = {
         headers: [
           {
             key: "Content-Security-Policy",
-            value: "frame-ancestors 'self' https://basic-decoupled-app.vercel.app https://:shop;",
+            value: "frame-ancestors 'self' https://:shop;", // locked to the shop for embedding
           },
         ],
       },
