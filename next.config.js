@@ -11,21 +11,21 @@ module.exports = {
           },
         ],
       },
-      // {
-      //   source: "/(.*?)",
-      //   has: [
-      //     {
-      //       type: "query",
-      //       key: "shop",
-      //     },
-      //   ],
-      //   headers: [
-      //     {
-      //       key: "Content-Security-Policy",
-      //       value: "frame-ancestors 'self' https://basic-decoupled-app.vercel.app https://:shop;",
-      //     },
-      //   ],
-      // },
+      {
+        source: "/(.*?)",
+        has: [
+          {
+            type: "query",
+            key: "shop",
+          },
+        ],
+        headers: [
+          {
+            key: "Content-Security-Policy",
+            value: "frame-ancestors 'self' https://basic-decoupled-app.vercel.app https://:shop;",
+          },
+        ],
+      },
     ];
   },
 }
